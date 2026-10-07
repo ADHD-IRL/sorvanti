@@ -8,25 +8,25 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Mono:wght@400;700&family=Montserrat:wght@600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Public+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=Yellowtail&family=Montserrat:wght@600&display=swap">
 <style>
-/* Layout: a two-register identity. Human voice = geometric sans italic + burnt orange; machine voice = monospace + teal.
-   Shares the Sorvanti 1960s mid-century system with the Advisory site. */
+/* Layout: a two-register identity. Human voice = brush script + coral; machine voice = monospace + aqua.
+   Shares the Sorvanti atomic modern system with the home and Advisory sites. */
 :root {
-  --paper: #F3E8D2;
-  --surface: #FBF5E8;
-  --raised: #EEDFBF;
-  --ink: #2B2019;
-  --muted: #6B5B49;
-  --rule: #DCCBA8;
-  --human: #B54C17;
-  --human-soft: #F5D9B5;
-  --machine: #2E7D74;
-  --machine-soft: #DCEBE5;
-  --display: "Jost", "Futura", "Century Gothic", sans-serif;
-  --body: "Jost", "Futura", "Century Gothic", "Segoe UI", sans-serif;
+  --paper: #FAF8F3;
+  --surface: #FFFFFF;
+  --raised: #EEF4F2;
+  --ink: #1E2A33;
+  --muted: #5B6770;
+  --rule: #E2E0D8;
+  --human: #C24B2C;
+  --human-soft: #FBE5DD;
+  --machine: #2A9D96;
+  --machine-soft: #DDF0EE;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Public Sans", "Segoe UI", system-ui, sans-serif;
   --logo: "Montserrat", "Segoe UI", system-ui, sans-serif;
-  --mono: "Space Mono", "Courier New", monospace;
+  --mono: "DM Mono", ui-monospace, Consolas, monospace;
   /* Fluid type scale: each step interpolates between a 360px and 1240px viewport */
   --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.86rem);
   --step-0: clamp(1rem, 0.97rem + 0.14vw, 1.08rem);
@@ -42,7 +42,9 @@
   --space-xl: clamp(3.5rem, 2.6rem + 4vw, 7rem);
   --gutter: clamp(16px, 4vw, 40px);
   --wrap: 1160px;
-  --mustard: #D99A1E; --orange: #C8561C; --teal: #2E7D74; --walnut: #5A3D27;
+  --mustard: #E5AF3E; --orange: #E0603F; --teal: #2A9D96; --walnut: #1E2A33;
+  --coral-text: #C24B2C; --aqua-soft: #DDF0EE; --coral-soft: #FBE5DD; --navy: #1E2A33; --navy-2: #283846; --mist: #EEF4F2;
+  --script: "Yellowtail", "Brush Script MT", cursive; --star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L56 38 L85 15 L62 44 L100 50 L62 56 L85 85 L56 62 L50 100 L44 62 L15 85 L38 56 L0 50 L38 44 L15 15 L44 38 Z'/%3E%3C/svg%3E"); --spark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 C53 35 65 47 100 50 C65 53 53 65 50 100 C47 65 35 53 0 50 C35 47 47 35 50 0 Z'/%3E%3C/svg%3E");
   color-scheme: light;
 }
 
@@ -354,56 +356,56 @@ footer { padding-block: 40px 56px; border-top: 1px solid var(--rule); }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: baseline; }
 footer p { color: var(--muted); font-size: 0.9rem; }
 
-/* ---------- 60s mid-century look (shared by both Sorvanti sites) ---------- */
-body { background-image: radial-gradient(rgba(90, 61, 39, 0.045) 1px, transparent 1px); background-size: 4px 4px; }
-.site-head { background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 0; }
-.site-head::after { content: ""; display: block; height: 9px; background: linear-gradient(var(--mustard) 0 3px, var(--orange) 3px 6px, var(--teal) 6px 9px); }
-.wordmark .practice { font-style: italic; font-weight: 500; color: var(--orange); }
-nav a { font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8rem; }
+/* ---------- atomic modern (shared by all three Sorvanti sites) ---------- */
+main { overflow-x: clip; }
+.site-head { background: color-mix(in srgb, var(--paper) 92%, transparent); border-bottom: 1px solid var(--rule); }
+.wordmark .practice { font-family: var(--script); font-style: normal; font-weight: 400; font-size: 1.35rem; color: var(--coral-text); line-height: 1; }
+nav a { font-weight: 500; }
 nav a.sister-link { color: var(--teal); }
-h1, h2, h3 { font-weight: 600; letter-spacing: -0.005em; }
-.hero h1 { font-weight: 600; letter-spacing: -0.015em; }
-.sec-head h2 { text-transform: uppercase; letter-spacing: 0.03em; }
-.label { color: var(--walnut); letter-spacing: 0.15em; }
-.btn { border-radius: 999px; font-weight: 600; padding: 12px 22px; background: var(--walnut); border-color: var(--walnut); color: #FBF5E8; }
-.btn:hover { background: transparent; color: var(--walnut); }
-.btn.ghost { border-color: var(--walnut); color: var(--walnut); background: transparent; }
-.btn.ghost:hover { background: var(--walnut); color: #FBF5E8; }
+h1, h2, h3 { letter-spacing: -0.01em; }
+.hero h1 { font-weight: 800; font-stretch: 112%; letter-spacing: -0.02em; }
+.sec-head h2 { font-weight: 800; font-stretch: 108%; }
+.label { color: var(--teal); display: inline-flex; align-items: center; gap: 8px; }
+.label::before { content: ""; width: 11px; height: 11px; flex: none; background: var(--orange); -webkit-mask: var(--star) center / contain no-repeat; mask: var(--star) center / contain no-repeat; }
+.btn { border-radius: 10px; font-weight: 600; background: var(--navy); border-color: var(--navy); color: #FFF; transition: transform .15s ease, background .15s ease; }
+.btn:hover { background: var(--navy-2); color: #FFF; transform: translateY(-1px); }
+.btn.ghost { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn.ghost:hover { background: var(--navy); color: #FFF; }
 .head-cta { background: var(--orange); border-color: var(--orange); }
-.head-cta:hover { background: transparent; color: var(--orange); }
-.field input, .field select, .field textarea { border-radius: 10px; background: #FFFDF7; }
-
-.hero h1 .h { font-weight: 700; font-style: italic; color: var(--orange); }
-.toggle { border-radius: 999px; border-color: var(--walnut); }
-.toggle button { border-radius: 999px; }
-.toggle button[aria-pressed="true"] { background: var(--walnut); color: #FBF5E8; }
+.head-cta:hover { background: var(--coral-text); border-color: var(--coral-text); }
+.field input, .field select, .field textarea { border-radius: 10px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid var(--aqua-soft); border-color: var(--teal); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+.hero h1 .h { font-family: var(--script); font-style: normal; font-weight: 400; font-stretch: 100%; letter-spacing: 0; color: var(--coral-text); font-size: 1.12em;  display: inline-block; padding-left: 0.12em; }
+.toggle { border-radius: 10px; border-color: var(--navy); }
+.toggle button[aria-pressed="true"] { background: var(--navy); color: #FFF; }
 .cell { border-radius: 10px; }
-.cell.freed-h { background: var(--orange); border-color: var(--orange); color: #FFF8EE; }
-.cell.freed-h .n { color: rgba(255, 248, 238, 0.75); }
+.cell.freed-h { background: var(--orange); border-color: var(--orange); color: #FFF; font-family: var(--body); font-style: normal; font-weight: 600; font-size: 0.86rem; }
+.cell.freed-h .n { color: rgba(255,255,255,.8); }
 .machine-strip { border-radius: 10px; border-left-color: var(--teal); }
-.thesis { background: var(--teal); color: #FBF5E8; border-block: 0; }
-.thesis .label { color: #F5E6C4; }
-.thesis blockquote em { color: var(--mustard); }
-.thesis .after { color: #E9F0E8; }
+.thesis { background: var(--navy); color: #F4F1EA; border-block: 0; position: relative; overflow: hidden; }
+.thesis::before { content: ""; position: absolute; width: 640px; height: 270px; right: -170px; top: -100px; border-radius: 60% 40% 70% 30% / 60% 50% 50% 40%; border: 2px solid rgba(42, 157, 150, 0.45); transform: rotate(-12deg); }
+.thesis .label { color: #8FD3CD; }
+.thesis blockquote em { color: var(--mustard); font-style: normal; }
+.thesis .after { color: #C8D0D4; }
 .problems li.key::before { color: var(--orange); }
 .pair div { border-radius: 12px; }
-.map-scroll, .services, .sheet, .p2p, .contact-grid form, .shield { border-radius: 16px; }
-.map-scroll, .sheet, .p2p { box-shadow: 6px 6px 0 var(--rule); }
-.services { overflow: hidden; box-shadow: 6px 6px 0 var(--rule); }
-.service.signature .flag { color: var(--orange); }
-.method li { border-top-width: 4px; }
-.method li:nth-child(1) { border-top-color: var(--mustard); }
-.method li:nth-child(2) { border-top-color: var(--orange); }
-.method li:nth-child(3) { border-top-color: var(--teal); }
-.method li:nth-child(4) { border-top-color: var(--walnut); }
-.method li:nth-child(5) { border-top-color: var(--mustard); }
+.map-scroll, .services, .sheet, .p2p { border-radius: 16px; }
+.map-scroll, .sheet, .p2p { box-shadow: 0 16px 36px -22px rgba(30,42,51,.3); }
+.services { overflow: hidden; }
+.service.signature .flag { color: var(--coral-text); }
+.method li { border-top-width: 3px; }
+.method li:nth-child(4n+1) { border-top-color: var(--teal); } .method li:nth-child(4n+2) { border-top-color: var(--orange); }
+.method li:nth-child(4n+3) { border-top-color: var(--mustard); } .method li:nth-child(4n+4) { border-top-color: var(--navy); }
 .method li:last-child { border-top-color: var(--orange); }
 .track span { border-radius: 999px; }
-.track span.goal { background: var(--teal); border-color: var(--teal); color: #FBF5E8; }
-.shield { border: 2px solid var(--walnut); box-shadow: 6px 6px 0 var(--mustard); }
+.track span.goal { background: var(--teal); border-color: var(--teal); color: #FFF; }
+.shield { border: 1px solid var(--rule); border-radius: 16px; position: relative; box-shadow: 0 16px 36px -22px rgba(30,42,51,.3); }
+.shield::before { content: ""; position: absolute; top: -14px; left: 20px; width: 28px; height: 28px; background: var(--orange); -webkit-mask: var(--star) center / contain no-repeat; mask: var(--star) center / contain no-repeat; }
 .nots li s { text-decoration-color: var(--orange); }
-.friction-copy .wait { border-left: 4px solid var(--orange); }
+.friction-copy .wait { border-left: 3px solid var(--orange); font-family: var(--script); font-style: normal; font-size: 1.9rem; color: var(--coral-text); }
 .combo .plus { color: var(--orange); }
+.combo .hu li { color: var(--coral-text); }
 
 /* the Sorvanti logo goes home; the practice name goes to the top of this site */
 .wordmark a { text-decoration: none; color: inherit; }
