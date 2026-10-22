@@ -441,6 +441,15 @@ h1, h2, h3 { letter-spacing: -0.015em; }
 .site-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--logo-sweep); opacity: .85; pointer-events: none; }
 .label::before { background: var(--logo-sweep); width: 26px; }
 .method li:nth-child(even):not(:last-child) { border-top-color: var(--emerald); }
+
+/* ---- Sorvanti tagline: this block is identical on every site ----
+   Adopt AI (steel) · Preserve judgment (amber) · Expand what people can do (emerald) */
+.tagline .t1, .tagline .t2, .tagline .t3 { -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+@media (min-width: 480px) { .tagline .t1, .tagline .t2 { white-space: nowrap; } }
+.tagline .t1 { background-image: linear-gradient(180deg, #FFFFFF 0%, #E4E8EC 38%, #9DA6AF 52%, #D5DADF 64%, #F4F6F8 100%); }
+.tagline .t2 { background-image: linear-gradient(180deg, #FFE9A8 0%, #F4C542 40%, #A87A08 58%, #EDBE45 100%); }
+.tagline .t3 { background-image: linear-gradient(180deg, #B6F0D2 0%, #5CC99A 45%, #1F9A6E 60%, #7FD8AE 100%); }
+footer .tagline { font-family: var(--display); font-weight: 600; font-size: 0.98rem; letter-spacing: -0.005em; margin: 0; }
 </style>
 </head>
 <body>
@@ -470,7 +479,7 @@ h1, h2, h3 { letter-spacing: -0.015em; }
   <section class="hero">
     <div class="wrap">
       <span class="label">AI transformation for the human enterprise</span>
-      <h1>Adopt AI. Preserve <span class="h">judgment.</span> Expand what people can do.</h1>
+      <h1 class="tagline"><span class="t1">Adopt AI.</span> <span class="t2">Preserve judgment.</span> <span class="t3">Expand what people can do.</span></h1>
       <p class="hero-lede">We help organizations decide how they should operate when people and intelligent systems work together every day, and then we <strong>stay through implementation until that way of working is normal</strong>.</p>
       <div class="hero-actions">
         <a class="btn" href="#contact">Talk to us about your organization</a>
@@ -839,7 +848,7 @@ h1, h2, h3 { letter-spacing: -0.015em; }
 <footer>
   <div class="wrap">
     <div class="wordmark"><a class="home-link" href="https://sorvantigroup.com/" aria-label="Sorvanti home" title="Sorvanti home"><span class="logo"><img src="assets/sorvanti-mark.png" alt="" width="38" height="38"><span class="logotype">Sorvanti</span></span></a><a class="practice" href="#top" aria-label="Sorvanti Transformation, back to top">Transformation</a></div>
-    <p>Adopt AI. Preserve judgment. Expand what people can do.</p>
+    <p class="tagline"><span class="t1">Adopt AI.</span> <span class="t2">Preserve judgment.</span> <span class="t3">Expand what people can do.</span></p>
     <p>© 2026 Sorvanti</p>
   </div>
 </footer>
